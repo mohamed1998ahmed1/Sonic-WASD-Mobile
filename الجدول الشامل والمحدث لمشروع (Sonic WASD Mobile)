@@ -4,22 +4,19 @@
 
 ### الجدول الشامل والمحدث لمشروع (Sonic WASD Mobile)
 
-| التصنيف | الاسم | النوع/اللغة | الحالة | الدور الوظيفي في المشروع |
-| --- | --- | --- | --- | --- |
-| **المكتبات (C#)** | MonoGame.Framework.WPF | NuGet Package | ✅ مثبتة | تشغيل المحرك داخل البرنامج. |
-| **المكتبات (C#)** | SharpDX (DirectX) | NuGet Package | ✅ مثبتة | الربط مع كارت الشاشة. |
-| **المكتبات (C++)** | FFmpeg (Merged) | Library | ✅ مدمج | فك تشفير الفيديو (مدمج في الـ CLR). |
-| **الأدوات (External)** | adb.exe / scrcpy.exe | Tools | 📦 موجود | أدوات الاتصال ونقل الشاشة. |
-| **السيرفرات (Android)** | android-server (x2) | Binary | 📦 موجود | التحكم في استجابة الـ WASD. |
-| **ملفات واجهة (C#)** | **App.xaml / .cs** | C# / WPF | ✅ جاهز | ملف الإقلاع الأساسي وتوزيع الموارد. |
-| **ملفات واجهة (C#)** | **SonicSplash.xaml / .cs** | C# / WPF | ✅ جاهز | شاشة البداية. |
-| **ملفات واجهة (C#)** | **MainWindow.xaml / .cs** | C# / WPF | ✅ جاهز | النافذة الرئيسية. |
-| **المحرك (C#)** | **SonicEngine.cs** | C# | ✅ جاهز | المحرك المسؤول عن رسم الجرافيكس. |
-| **القلب (C++ Header)** | **Sonic WASD Mobile CLR.h** | C++ | ✅ مدمج | الكلاس الرئيسي (FFmpeg + CLR + Input). |
-| **القلب (C++ Source)** | Sonic WASD Mobile CLR.cpp | C++ | ✅ جاهز | تجميع ملفات الـ CLR. |
-| **القلب (C++ Source)** | **LiveController.cpp** | C++ | ⚠️ فحص | إدارة رفع السيرفر عبر الـ ADB. |
-| **القلب (C++ Source)** | EngineController.cpp | C++ | ⚠️ فحص | إدارة استقرار الاتصال. |
-| **الهدف النهائي** | LiveSonicWASD.xaml.cs | C# | 🕒 انتظار | الربط النهائي بين الواجهة والـ CLR. |
+م,الملف / القطعة,اللغة / النوع,الدور الوظيفي,حالة المطابقة,نسبة الإنجاز,ملاحظة فنية
+1,App.xaml (.cs),XAML/C#,مدير التشغيل (Startup),✅ جاهز,100%,مضبوط على SonicSplash.
+2,SonicSplash (.xaml/.cs),XAML/C#,شاشة التحميل (Loading),✅ جاهز,100%,ربط احترافي باستخدام DispatcherTimer.
+3,MainWindow (.xaml/.cs),XAML/C#,واجهة القيادة (Cockpit),✅ جاهز,95%,جاهز لاستقبال بيانات الـ Engine.
+4,LiveSonicWASD (.xaml/.cs),XAML/C#,واجهة البث (Display),✅ جاهز,95%,تم التأكد من الـ WriteableBitmap.
+5,Sonic WASD CLR.h,C++/CLI,الجسر التقني (Bridge),✅ جاهز,100%,قلب النظام (Managed to Unmanaged).
+6,EngineController.cpp,C++,إدارة الـ ADB والاتصال,✅ جاهز,95%,يحتاج ضبط مسارات ADB.
+7,LiveStreamController.cpp,C++,فك ضغط الفيديو (H.264),⚠️ تطوير,50%,نقطة التركيز القصوى.
+8,FFmpeg (Libavcodec/avformat),مكتبة (DLL),فك تشفير الفيديو,⚠️ اختبار,80%,أساس عرض الفيديو؛ يجب ربطها بالـ SwsContext.
+9,Winsock2 / Ws2_32,مكتبة (System),نقل بيانات الشبكة,✅ جاهز,100%,المسؤولة عن استقبال حزم الفيديو عبر الـ Socket.
+10,MonoGame.WpfInterop,مكتبة (NuGet),محرك الرسوم والعرض,✅ جاهز,100%,مكتبة العرض السريع داخل الواجهة.
+
+
 
 ---
 

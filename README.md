@@ -4,16 +4,32 @@
 ## 📋 Overview
 **Sonic WASD Mobile** is a high-speed control engine designed to bridge the gap between mobile touch interfaces and PC peripherals. Built for competitive titles like **COD Mobile** and **PUBG**, it focuses on zero-latency input injection and precision mouse control.
 
+## 🛠️ Project Status & Architecture
+The following table provides a detailed breakdown of the system components, their roles, and current development status:
+
+| م | الملف / القطعة | اللغة / النوع | الدور الوظيفي | الحالة | النسبة | ملاحظة فنية |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | App.xaml (.cs) | XAML/C# | مدير التشغيل (Startup) | ✅ جاهز | 100% | مضبوط على SonicSplash. |
+| 2 | SonicSplash (.xaml/.cs) | XAML/C# | شاشة التحميل (Loading) | ✅ جاهز | 100% | ربط احترافي بـ DispatcherTimer. |
+| 3 | MainWindow (.xaml/.cs) | XAML/C# | واجهة القيادة (Cockpit) | ✅ جاهز | 95% | جاهز لاستقبال بيانات الـ Engine. |
+| 4 | LiveSonicWASD (.xaml/.cs) | XAML/C# | واجهة البث (Display) | ✅ جاهز | 95% | تم التأكد من الـ WriteableBitmap. |
+| 5 | Sonic WASD CLR.h | C++/CLI | الجسر التقني (Bridge) | ✅ جاهز | 100% | قلب النظام (Managed to Unmanaged). |
+| 6 | EngineController.cpp | C++ | إدارة الـ ADB والاتصال | ✅ جاهز | 95% | يحتاج ضبط مسارات ADB. |
+| 7 | LiveStreamController.cpp | C++ | فك ضغط الفيديو (H.264) | ⚠️ تطوير | 50% | نقطة التركيز القصوى. |
+| 8 | FFmpeg (Libavcodec) | DLL | فك تشفير الفيديو | ⚠️ اختبار | 80% | يجب ربطها بالـ SwsContext. |
+| 9 | Winsock2 / Ws2_32 | System | نقل بيانات الشبكة | ✅ جاهز | 100% | استقبال حزم الفيديو عبر Socket. |
+| 10 | MonoGame.WpfInterop | NuGet | محرك الرسوم والعرض | ✅ جاهز | 100% | العرض السريع داخل الواجهة. |
+
 ## ✨ Key Features
 * **Sonic Input Engine:** Ultra-low latency mapping for instantaneous response.
 * **360° Precision FPS:** Advanced mouse-lock system for seamless camera movement.
 * **Transparent Overlay:** A lightweight C# / WPF-based UI that stays on top of your game.
-* **Universal Compatibility:** Designed to work with **WSABuilds**, **scrcpy**, and other mirroring tools.
+* **Universal Compatibility:** Designed to work with **ADB**, **scrcpy**, and other mirroring tools.
 
 ## 🛠️ Built With
-* **C# / .NET Core** - Core logic and UI.
+* **C# / .NET** - Core logic and UI.
 * **C++** - Low-level input injection and performance optimization.
-* **Windows API** - For advanced process and memory management.
+* **FFmpeg** - Native video decoding pipeline.
 
 ## 🚀 Getting Started
 *This project is currently in active development.*
@@ -25,3 +41,6 @@
 
 ## 🤝 Contributing
 Contributions are welcome! If you have ideas for improving the input latency or adding new game profiles, feel free to open an issue or a PR.
+
+---
+*Built with passion by [mohamed1998ahmed1]*

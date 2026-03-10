@@ -10,15 +10,10 @@ The following table provides a detailed breakdown of the system components, thei
 | م | الملف / القطعة | اللغة / النوع | الدور الوظيفي | الحالة | النسبة | ملاحظة فنية |
 م,الملف / القطعة,اللغة,الدور الوظيفي,الحالة,النسبة,الملاحظة الفنية
 
-1,App.xaml (.cs),XAML/C#,مدير التشغيل (Startup),✅ جاهز,100%,مضبوط على SonicSplash.
-2,SonicSplash (.xaml/.cs),XAML/C#,شاشة التحميل,✅ جاهز,100%,ربط DispatcherTimer احترافي.
-3,MainWindow (.xaml/.cs),XAML/C#,واجهة القيادة,✅ جاهز,95%,جاهز لاستقبال بيانات الـ Engine.
-4,LiveSonicWASD (.xaml/.cs),XAML/C#,واجهة البث,✅ جاهز,95%,تم التأكد من الـ HwndHost (عرض scrcpy).
-5,Sonic WASD CLR.h,C++/CLI,الجسر التقني (Bridge),✅ جاهز,100%,قلب النظام والربط.
-6,EngineController.cpp,C++,إدارة الـ ADB والاتصال,✅ جاهز,95%,يحتاج ضبط مسارات ADB.
-7,LiveStreamController.cpp,C++,إدارة عرض scrcpy,⚠️ تطوير,70%,التركيز على تضمين النافذة (Embedding).
-8,Winsock2 / Ws2_32,Library,نقل بيانات الشبكة,✅ جاهز,100%,استقبال حزم الـ Socket.
-9,MonoGame.WpfInterop,NuGet,محرك الرسوم والعرض,✅ جاهز,100%,العرض السريع داخل الـ WPF.
+
+
+
+
 
 ## ✨ Key Features
 * **Sonic Input Engine:** Ultra-low latency mapping for instantaneous response.

@@ -30,8 +30,9 @@ The following table provides a detailed breakdown of the system components, thei
 
 1. Clone the repository:
    `git clone https://github.com/mohamed1998ahmed1/Sonic-WASD-Mobile.git`
-2. Open the solution in **Visual Studio 2022**.
-3. Build and Run.
+
+
+
 
 ## 🤝 Contributing
 Contributions are welcome! If you have ideas for improving the input latency or adding new game profiles, feel free to open an issue or a PR.

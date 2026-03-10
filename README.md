@@ -16,9 +16,8 @@ The following table provides a detailed breakdown of the system components, thei
 | 5 | Sonic WASD CLR.h | C++/CLI | الجسر التقني (Bridge) | ✅ جاهز | 100% | قلب النظام (Managed to Unmanaged). |
 | 6 | EngineController.cpp | C++ | إدارة الـ ADB والاتصال | ✅ جاهز | 95% | يحتاج ضبط مسارات ADB. |
 | 7 | LiveStreamController.cpp | C++ | فك ضغط الفيديو (H.264) | ⚠️ تطوير | 50% | نقطة التركيز القصوى. |
-| 8 | FFmpeg (Libavcodec) | DLL | فك تشفير الفيديو | ⚠️ اختبار | 80% | يجب ربطها بالـ SwsContext. |
-| 9 | Winsock2 / Ws2_32 | System | نقل بيانات الشبكة | ✅ جاهز | 100% | استقبال حزم الفيديو عبر Socket. |
-| 10 | MonoGame.WpfInterop | NuGet | محرك الرسوم والعرض | ✅ جاهز | 100% | العرض السريع داخل الواجهة. |
+| 8 | Winsock2 / Ws2_32 | System | نقل بيانات الشبكة | ✅ جاهز | 100% | استقبال حزم الفيديو عبر Socket. |
+| 9 | MonoGame.WpfInterop | NuGet | محرك الرسوم والعرض | ✅ جاهز | 100% | العرض السريع داخل الواجهة. |
 
 ## ✨ Key Features
 * **Sonic Input Engine:** Ultra-low latency mapping for instantaneous response.
@@ -29,7 +28,6 @@ The following table provides a detailed breakdown of the system components, thei
 ## 🛠️ Built With
 * **C# / .NET** - Core logic and UI.
 * **C++** - Low-level input injection and performance optimization.
-* **FFmpeg** - Native video decoding pipeline.
 
 ## 🚀 Getting Started
 *This project is currently in active development.*

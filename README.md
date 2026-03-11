@@ -1,4 +1,5 @@
-# 🚀 Sonic WASD Mobile
+# 🚀 Sonic WASD Mobile<img width="2944" height="2944" alt="Picsart_23-12-30_11-11-19-962" src="https://github.com/user-attachments/assets/2db64aa0-2d6e-4637-98f6-17e3e4ce709c" />
+
 **The Next-Gen Key-Mapping Engine for High-Performance Mobile Gaming on PC.**
 
 ## 📋 Overview

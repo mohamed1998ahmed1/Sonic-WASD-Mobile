@@ -50,10 +50,11 @@ namespace Sonic_WASD_Mobile
                     StartUpdateLoop();
                 }
 
-                // --- التعديل هنا: فتح الواجهة الجديدة وإغلاق هذه الواجهة ---
+                // --- التعديل هنا: إخفاء النافذة الحالية وفتح الجديدة ---
                 LiveSonicWASD newWindow = new LiveSonicWASD();
+                newWindow.Owner = this; // ربط الواجهات
                 newWindow.Show();
-                this.Close();
+                this.Hide(); // إخفاء الواجهة الرئيسية بدلاً من إغلاقها
             }
             else
             {
@@ -109,9 +110,10 @@ namespace Sonic_WASD_Mobile
             Application.Current.Shutdown();
         }
 
-        private void Close_Click(object sender, RoutedEventArgs e) => Close();
+        private void Close_Click(object sender, RoutedEventArgs e) => Application.Current.Shutdown(); // إغلاق البرنامج بالكامل
         private void Minimize_Click(object sender, RoutedEventArgs e) => WindowState = WindowState.Minimized;
         private void Window_MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
+        
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (string.IsNullOrEmpty(_activeDeviceId)) return;

@@ -49,6 +49,11 @@ namespace Sonic_WASD_Mobile
                     EngineController.StartMonitoring(id);
                     StartUpdateLoop();
                 }
+
+                // --- التعديل هنا: فتح الواجهة الجديدة وإغلاق هذه الواجهة ---
+                LiveSonicWASD newWindow = new LiveSonicWASD();
+                newWindow.Show();
+                this.Close();
             }
             else
             {

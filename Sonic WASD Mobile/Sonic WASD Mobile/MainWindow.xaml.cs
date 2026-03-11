@@ -1,10 +1,11 @@
-﻿using System;
+using SonicWASD;
+using SonicWASDMobileCLR;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
-using SonicWASDMobileCLR;
 
 namespace Sonic_WASD_Mobile
 {
@@ -41,9 +42,6 @@ namespace Sonic_WASD_Mobile
                 _activeDeviceId = id;
                 StatusLabel.Text = "متصل بنجاح ⚡";
                 StatusLabel.Foreground = Brushes.Lime;
-
-                // تم تعليق فتح نافذة البث مؤقتاً لحين انتهاءنا من الجزء الخاص بها
-                // liveWindow.Show(); 
 
                 if (!_isMonitoring)
                 {
@@ -92,8 +90,12 @@ namespace Sonic_WASD_Mobile
             }
         }
 
-        private void Settings_Click(object sender, RoutedEventArgs e) =>
-            MessageBox.Show("إعدادات الصاروخ قيد التطوير يا فنان! 🚀", "Sonic WASD");
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsWindow settingsWin = new SettingsWindow();
+            settingsWin.Owner = this;
+            settingsWin.ShowDialog();
+        }
 
         private void ExitApp_Click(object sender, RoutedEventArgs e)
         {

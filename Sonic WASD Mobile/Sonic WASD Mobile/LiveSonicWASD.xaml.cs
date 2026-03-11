@@ -23,9 +23,11 @@ namespace Sonic_WASD_Mobile
         // --- أزرار التحكم في النافذة ---
         private void Close_Click(object sender, RoutedEventArgs e)
         {
-            // إظهار واجهة الاتصال الرئيسية وإغلاق هذه الواجهة
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            // إظهار الواجهة الأساسية (MainWindow) المخفية وإغلاق هذه الواجهة
+            if (this.Owner != null)
+            {
+                this.Owner.Show();
+            }
             this.Close();
         }
 
@@ -54,7 +56,7 @@ namespace Sonic_WASD_Mobile
                 Task.Run(() => EngineController.SendKeyCommand(_activeDeviceId, "25"));
         }
 
-        // --- دوال أزرار التنقل (الرجوع، الهوم، التطبيقات) ---
+        // --- دوال أزرار التنقل ---
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(_activeDeviceId))
